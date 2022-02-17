@@ -72,8 +72,6 @@ namespace UrlPinger.Repositories
                 throw new NotFoundException();
 
             var url = _mapper.Map<RemoteAddressDto, RemoteAddress>(remoteAddressDto);
-            _context.Entry(url).State = EntityState.Detached;
-            _context.Entry(url).State = EntityState.Modified;
             _context.Update(url);
             await _context.SaveChangesAsync();
             return remoteAddressDto;
