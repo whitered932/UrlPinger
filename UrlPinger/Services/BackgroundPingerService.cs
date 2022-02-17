@@ -52,7 +52,7 @@ namespace UrlPinger.Services
                     }
                 }
 
-                await Task.Delay(TimeSpan.FromSeconds(3), stoppingToken);
+                await Task.Delay(TimeSpan.FromSeconds(10), stoppingToken);
             }
         }
     }
